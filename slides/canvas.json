@@ -1,0 +1,15 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",       "x": 0,    "y": 0,   "w": 1280, "h": 720, "print": "fixed" },
+    { "file": "Overview.dc.html",   "x": 1400, "y": 0,   "w": 1280, "h": 720, "print": "fixed" },
+    { "file": "Perception.dc.html", "x": 2800, "y": 0,   "w": 1280, "h": 720, "print": "fixed" },
+    { "file": "Problem.dc.html",    "x": 4200, "y": 0,   "w": 1280, "h": 720, "print": "fixed" },
+    { "file": "Data.dc.html",       "x": 5600, "y": 0,   "w": 1280, "h": 720, "print": "fixed" },
+    { "file": "Control.dc.html",    "x": 0,    "y": 870, "w": 1280, "h": 720, "print": "fixed" },
+    { "file": "RootCause.dc.html",  "x": 1400, "y": 870, "w": 1280, "h": 720, "print": "fixed" },
+    { "file": "Safety.dc.html",     "x": 2800, "y": 870, "w": 1280, "h": 720, "print": "fixed" },
+    { "file": "Results.dc.html",    "x": 4200, "y": 870, "w": 1280, "h": 720, "print": "fixed" },
+    { "file": "NextSteps.dc.html",  "x": 5600, "y": 870, "w": 1280, "h": 720, "print": "fixed" }
+  ],
+  "launch": { "view": "focused", "file": "Main.dc.html" }
+}

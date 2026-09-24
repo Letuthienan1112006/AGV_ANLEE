@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+  <style>
+:root{
+  --bg:oklch(15% 0.025 255);
+  --surface:oklch(19.5% 0.03 255);
+  --surface-2:oklch(24% 0.03 255);
+  --border:oklch(33% 0.03 255);
+  --text:oklch(95% 0.008 255);
+  --text-dim:oklch(68% 0.02 255);
+  --text-faint:oklch(50% 0.02 255);
+  --accent:oklch(78% 0.15 75);
+  --accent-soft:oklch(78% 0.15 75 / 0.14);
+  --accent-line:oklch(78% 0.15 75 / 0.35);
+  --good:oklch(74% 0.15 152);
+  --good-soft:oklch(74% 0.15 152 / 0.14);
+  --bad:oklch(68% 0.17 25);
+  --bad-soft:oklch(68% 0.17 25 / 0.14);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  width:1280px;height:720px;overflow:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'IBM Plex Sans',system-ui,sans-serif;
+  position:relative;
+}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;}
+.slide{
+  width:1280px;height:720px;
+  display:flex;flex-direction:column;
+  padding:48px 64px 40px 64px;
+  position:relative;
+}
+a{color:var(--accent);}
+a:hover{color:oklch(85% 0.15 75);}
+
+/* corner brand mark - required on every slide */
+.islab{
+  position:absolute; top:32px; right:64px;
+  display:flex; align-items:center; gap:8px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:13px; font-weight:600; letter-spacing:0.18em;
+  color:var(--accent); text-transform:uppercase;
+}
+.islab-dot{width:7px;height:7px;background:var(--accent);flex:none;}
+
+/* footer chrome */
+.foot{
+  position:absolute; left:64px; right:64px; bottom:28px;
+  display:flex; justify-content:space-between; align-items:flex-end;
+  font-family:'IBM Plex Mono',monospace; font-size:11px;
+  color:var(--text-faint); letter-spacing:0.04em;
+}
+.foot-page{color:var(--text-dim);}
+
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600;
+  letter-spacing:0.16em; text-transform:uppercase; color:var(--accent);
+  margin:0 0 10px 0;
+}
+.h1{font-size:40px;font-weight:700;line-height:1.12;margin:0 0 6px 0;letter-spacing:-0.01em;text-wrap:balance;}
+.h2{font-size:26px;font-weight:600;line-height:1.2;margin:0 0 4px 0;text-wrap:balance;}
+.lede{font-size:16px;line-height:1.55;color:var(--text-dim);margin:0;max-width:920px;}
+
+.rule{height:1px;background:var(--border);border:none;margin:20px 0;}
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:20px 22px;
+}
+.tile{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:18px 20px;
+  display:flex; flex-direction:column; gap:6px;
+}
+.tile-label{font-size:12px;color:var(--text-dim);letter-spacing:0.03em;}
+.tile-num{font-family:'IBM Plex Mono',monospace;font-size:30px;font-weight:600;color:var(--text);}
+.tile-sub{font-size:12.5px;color:var(--text-faint);}
+.good{color:var(--good);}
+.text-dim{color:var(--text-dim);}
+.bad{color:var(--bad);}
+.accent{color:var(--accent);}
+
+.arrow{color:var(--text-faint);}
+.pill{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;
+  letter-spacing:0.04em;text-transform:uppercase;
+  padding:4px 10px;border-radius:4px;
+}
+.pill-good{background:var(--good-soft);color:var(--good);}
+.pill-bad{background:var(--bad-soft);color:var(--bad);}
+.pill-accent{background:var(--accent-soft);color:var(--accent);}
+
+ul.clean{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
+</style>
+</helmet>
+<div class="slide">
+
+  <div class="eyebrow">Kế hoạch</div>
+  <div class="h1">Đã xong &amp; bước tiếp theo</div>
+  <div class="rule"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;flex:1;">
+    <div>
+      <div class="h2" style="font-size:16px;margin-bottom:6px;">Đã hoàn thành</div>
+      <div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:13px 0;border-bottom:1px solid var(--border);">
+      <div>
+        <div style="font-size:14.5px;font-weight:600;">Lỗi nhận diện heading</div>
+        <div style="font-size:12.5px;color:var(--text-dim);margin-top:2px;line-height:1.4;">get_heading_error() bịa điểm xa từ nền road &mdash; đã triệt tiêu sai lệch</div>
+      </div>
+      <div style="flex:none;"><span class="pill pill-good"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--good)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg> XONG</span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:13px 0;border-bottom:1px solid var(--border);">
+      <div>
+        <div style="font-size:14.5px;font-weight:600;">Nhãn dữ liệu liền mạch</div>
+        <div style="font-size:12.5px;color:var(--text-dim);margin-top:2px;line-height:1.4;">+83% pixel vạch, +64% độ phủ &mdash; đã train &amp; triển khai model mới</div>
+      </div>
+      <div style="flex:none;"><span class="pill pill-good"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--good)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg> XONG</span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:13px 0;border-bottom:1px solid var(--border);">
+      <div>
+        <div style="font-size:14.5px;font-weight:600;">Khâu tích phân PID</div>
+        <div style="font-size:12.5px;color:var(--text-dim);margin-top:2px;line-height:1.4;">Thêm KI thật sự &plusmn; chống windup có điều kiện</div>
+      </div>
+      <div style="flex:none;"><span class="pill pill-good"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--good)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg> XONG</span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:13px 0;border-bottom:1px solid var(--border);">
+      <div>
+        <div style="font-size:14.5px;font-weight:600;">Firmware lực lái</div>
+        <div style="font-size:12.5px;color:var(--text-dim);margin-top:2px;line-height:1.4;">SPEED_REFERENCE &amp; PWM_MAX &mdash; đã nạp, xác nhận trên giá</div>
+      </div>
+      <div style="flex:none;"><span class="pill pill-good"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--good)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg> XONG</span></div>
+    </div></div>
+    </div>
+    <div>
+      <div class="h2" style="font-size:16px;margin-bottom:6px;">Tiếp theo</div>
+      <div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:13px 0;border-bottom:1px solid var(--border);">
+      <div>
+        <div style="font-size:14.5px;font-weight:600;">Đo lực lái CÓ TẢI trên đường</div>
+        <div style="font-size:12.5px;color:var(--text-dim);margin-top:2px;line-height:1.4;">PWM_MAX chỉ bị siết khi có tải &mdash; giá thử không kiểm chứng được</div>
+      </div>
+      <div style="flex:none;"><span class="pill pill-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> TIẾP THEO</span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:13px 0;border-bottom:1px solid var(--border);">
+      <div>
+        <div style="font-size:14.5px;font-weight:600;">Hiệu chỉnh STEER_CENTER_X</div>
+        <div style="font-size:12.5px;color:var(--text-dim);margin-top:2px;line-height:1.4;">Điểm ngắm camera lệch ~40px so với tâm vạch thật &mdash; công cụ đo đã sẵn (run snap)</div>
+      </div>
+      <div style="flex:none;"><span class="pill pill-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> TIẾP THEO</span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:13px 0;border-bottom:1px solid var(--border);">
+      <div>
+        <div style="font-size:14.5px;font-weight:600;">Đo STEER_TRIM (hở vòng)</div>
+        <div style="font-size:12.5px;color:var(--text-dim);margin-top:2px;line-height:1.4;">Xe tự trôi phải dù 2 bánh cân bằng &mdash; do lệch cơ khí, đo bằng yaw IMU (run trim)</div>
+      </div>
+      <div style="flex:none;"><span class="pill pill-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> TIẾP THEO</span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:13px 0;border-bottom:1px solid var(--border);">
+      <div>
+        <div style="font-size:14.5px;font-weight:600;">Tinh chỉnh lại PID</div>
+        <div style="font-size:12.5px;color:var(--text-dim);margin-top:2px;line-height:1.4;">Chỉ sau khi lực lái đủ &mdash; khâu I mới có vùng tuyến tính để làm việc</div>
+      </div>
+      <div style="flex:none;"><span class="pill pill-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> TIẾP THEO</span></div>
+    </div></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px;">
+    <div style="font-size:13px;color:var(--text-dim);">
+      <span style="color:var(--text);font-weight:600;">Công cụ mới:</span>
+      <span class="mono accent">run</span> &mdash; một lệnh cho mọi chế độ thử (đường thật / giá / khô / hiệu chỉnh) &middot;
+      <span class="mono accent">verdict.py</span> &mdash; tự chấm điểm mỗi lần chạy theo đúng 3 tầng lỗi ở trên.
+    </div>
+  </div>
+  <div class="foot">
+    <div>Còn tồn đọng & kế hoạch</div>
+    <div class="foot-page">10 / 10</div>
+  </div>
+
+  <div class="islab"><span class="islab-dot"></span>ISLAB</div>
+</div>
+</x-dc>
+
+</body>
+</html>

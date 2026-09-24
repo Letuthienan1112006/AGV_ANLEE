@@ -1,0 +1,71 @@
+__pycache__/
+*.pyc
+.venv/
+*.AppImage
+*.log
+*.avi
+*.mp4
+alert_images/
+old_records/
+patrol_log.db
+backup_yolov8/
+*.pt
+
+# Build artifacts (PlatformIO, per-project)
+.pio/
+
+# Editor/workspace (may khac nhau tuy nguoi)
+.vscode/
+*.code-workspace
+
+# Anh/video debug - tao ra khi test, khong phai source code
+agv_debug_images/
+agv_debug_videos/
+
+# Model weights + dataset lon - khong hop de luu trong git (tram MB)
+train_data/*.tar
+train_data/*.zip
+train_data/dataset_v1*/
+train_data/dataset_v2*/
+train_data/collect_*/
+train_data/collected_for_labeling/
+train_data/model_compare_*/
+train_data/__pycache__/
+bench_imgs/
+train_images/
+
+# Backup tu tay (*.bak) - git da co history roi, khong can luu them ban nay
+*.bak
+*.swp
+
+# Secret (Discord webhook...) - chi ton tai tren Jetson, khong duoc len git
+secrets_local.py
+Confg.py.before_restore
+
+# Video debug: 232MB / 17 file, va tu truoc den nay chua file nao
+# duoc commit. Ghi ro ra day de khong ai commit nham - CSV/log cua
+# cung lan chay chi 1.5MB va la phan bang chung thuc su.
+/runs_pulled/
+/frames_check/
+/snapshots_pulled/
+
+# File handoff giua cac agent trong pipeline /ship - tam thoi, khong phai source
+.bangiao/
+
+# cache cua cong cu, khong phai ma nguon
+.playwright-mcp/
+
+# Nhung log CUA CAC LAN CHAY thi phai giu: bridge.log chua cac dong ENC ma
+# verdict.py va baseline.py doc de cham tang co khi, va voi cac lan chay
+# truoc 2026-09-11 (chua co wheel_telem.csv) do la nguon DUY NHAT. Moi file
+# ~23KB. Quy tac *.log o tren la dung cho log rac, khong dung cho bang chung.
+/.runs/
+/runs/
+*.onnx
+*.engine
+*.tar
+*.zip
+
+# Auto-ghi boi hook log-test-failures.sh - nhat ky pytest fail cua may nay,
+# khong phai bang chung nhu runs_pulled/*.log
+.claude/test-failures.log

@@ -1,0 +1,45 @@
+{
+  "config": {
+    "BASE_SPEED": "16",
+    "HEADING_ERROR_WEIGHT": "2.0",
+    "LANE_ERROR_SMOOTHING_ALPHA": "0.5",
+    "LANE_LOST_MAX_FRAMES": "4",
+    "LANE_LOST_STEER_DECAY": "0.6",
+    "MIN_SPEED": "14",
+    "PID_INTEGRAL_LIMIT": "100",
+    "PID_KD": "0.02",
+    "PID_KI": "0.03",
+    "PID_KP": "0.05",
+    "PID_MAX_OUTPUT": "8",
+    "PID_STEP_LIMIT": "6",
+    "RECOVERY_SPEED": "12",
+    "STEER_CENTER_X": "344",
+    "STEER_TRIM": "-1"
+  },
+  "config_from_run_snapshot": true,
+  "firmware": {
+    "BASE_PWM": "90",
+    "INTEGRAL_LIMIT": "600.0",
+    "KI": "0.015",
+    "KP": "0.45",
+    "MAX_WHEEL_TARGET_TICKS": "70",
+    "PWM_MAX": "140",
+    "PWM_MIN": "70",
+    "RIGHT_WHEEL_PWM_TRIM": "1.03",
+    "SPEED_COMMAND_MAX": "25",
+    "SPEED_REFERENCE": "25",
+    "STEER_COMMAND_MAX": "20",
+    "STEER_GAIN_PERCENT": "70",
+    "TARGET_TICKS_AT_REFERENCE": "40"
+  },
+  "firmware_note": "doc tu main.cpp hien tai luc luu, KHONG phai chup cung lan chay",
+  "git_head_when_saved": "b8b87745",
+  "label": "quet-steer-tren-gia-11-9",
+  "measured": {
+    "diff_abs_median": 2.0,
+    "enc_source": "wheel_telem.csv",
+    "moved_samples": 171,
+    "ticks_per_steer": -2.23
+  },
+  "run_dir": "runs_pulled/20260911_053434_sweep"
+}

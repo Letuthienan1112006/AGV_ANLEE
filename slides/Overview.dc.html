@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+  <style>
+:root{
+  --bg:oklch(15% 0.025 255);
+  --surface:oklch(19.5% 0.03 255);
+  --surface-2:oklch(24% 0.03 255);
+  --border:oklch(33% 0.03 255);
+  --text:oklch(95% 0.008 255);
+  --text-dim:oklch(68% 0.02 255);
+  --text-faint:oklch(50% 0.02 255);
+  --accent:oklch(78% 0.15 75);
+  --accent-soft:oklch(78% 0.15 75 / 0.14);
+  --accent-line:oklch(78% 0.15 75 / 0.35);
+  --good:oklch(74% 0.15 152);
+  --good-soft:oklch(74% 0.15 152 / 0.14);
+  --bad:oklch(68% 0.17 25);
+  --bad-soft:oklch(68% 0.17 25 / 0.14);
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  width:1280px;height:720px;overflow:hidden;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'IBM Plex Sans',system-ui,sans-serif;
+  position:relative;
+}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;}
+.slide{
+  width:1280px;height:720px;
+  display:flex;flex-direction:column;
+  padding:48px 64px 40px 64px;
+  position:relative;
+}
+a{color:var(--accent);}
+a:hover{color:oklch(85% 0.15 75);}
+
+/* corner brand mark - required on every slide */
+.islab{
+  position:absolute; top:32px; right:64px;
+  display:flex; align-items:center; gap:8px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:13px; font-weight:600; letter-spacing:0.18em;
+  color:var(--accent); text-transform:uppercase;
+}
+.islab-dot{width:7px;height:7px;background:var(--accent);flex:none;}
+
+/* footer chrome */
+.foot{
+  position:absolute; left:64px; right:64px; bottom:28px;
+  display:flex; justify-content:space-between; align-items:flex-end;
+  font-family:'IBM Plex Mono',monospace; font-size:11px;
+  color:var(--text-faint); letter-spacing:0.04em;
+}
+.foot-page{color:var(--text-dim);}
+
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600;
+  letter-spacing:0.16em; text-transform:uppercase; color:var(--accent);
+  margin:0 0 10px 0;
+}
+.h1{font-size:40px;font-weight:700;line-height:1.12;margin:0 0 6px 0;letter-spacing:-0.01em;text-wrap:balance;}
+.h2{font-size:26px;font-weight:600;line-height:1.2;margin:0 0 4px 0;text-wrap:balance;}
+.lede{font-size:16px;line-height:1.55;color:var(--text-dim);margin:0;max-width:920px;}
+
+.rule{height:1px;background:var(--border);border:none;margin:20px 0;}
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:20px 22px;
+}
+.tile{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:18px 20px;
+  display:flex; flex-direction:column; gap:6px;
+}
+.tile-label{font-size:12px;color:var(--text-dim);letter-spacing:0.03em;}
+.tile-num{font-family:'IBM Plex Mono',monospace;font-size:30px;font-weight:600;color:var(--text);}
+.tile-sub{font-size:12.5px;color:var(--text-faint);}
+.good{color:var(--good);}
+.text-dim{color:var(--text-dim);}
+.bad{color:var(--bad);}
+.accent{color:var(--accent);}
+
+.arrow{color:var(--text-faint);}
+.pill{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;
+  letter-spacing:0.04em;text-transform:uppercase;
+  padding:4px 10px;border-radius:4px;
+}
+.pill-good{background:var(--good-soft);color:var(--good);}
+.pill-bad{background:var(--bad-soft);color:var(--bad);}
+.pill-accent{background:var(--accent-soft);color:var(--accent);}
+
+ul.clean{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;}
+</style>
+</helmet>
+<div class="slide">
+
+  <div class="eyebrow">Hệ thống</div>
+  <div class="h1">Nhiệm vụ &amp; kiến trúc phần cứng</div>
+  <div class="rule"></div>
+  <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:40px;">
+    <div>
+      <div class="h2" style="font-size:18px;margin-bottom:16px;">Nhiệm vụ</div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="flex:none;width:34px;height:34px;border-radius:6px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M6 16c0-6 4-4 6-7s6-1 6-3"/></svg></div>
+        <div>
+          <div style="font-size:15px;font-weight:600;">Tuần tra tự động</div>
+          <div style="font-size:13px;color:var(--text-dim);line-height:1.4;">Bám làn theo vạch sơn dọc hành lang / đường nội bộ</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="flex:none;width:34px;height:34px;border-radius:6px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div>
+          <div style="font-size:15px;font-weight:600;">Né vật cản</div>
+          <div style="font-size:13px;color:var(--text-dim);line-height:1.4;">Dừng khẩn khi LiDAR thấy vật &lt;&#8202;1.2m, né khi bị chặn quá lâu</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="flex:none;width:34px;height:34px;border-radius:6px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6"/></svg></div>
+        <div>
+          <div style="font-size:15px;font-weight:600;">Cảnh báo người lạ</div>
+          <div style="font-size:13px;color:var(--text-dim);line-height:1.4;">YOLOv8n riêng, phát hiện &amp; gửi cảnh báo qua MQTT / Discord</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="flex:none;width:34px;height:34px;border-radius:6px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.8" fill="var(--accent)"/></svg></div>
+        <div>
+          <div style="font-size:15px;font-weight:600;">Tự bảo vệ</div>
+          <div style="font-size:13px;color:var(--text-dim);line-height:1.4;">IMU phát hiện bị nhấc lên, tự dừng khi mất vạch &ge;&#8202;8 khung</div>
+        </div>
+      </div>
+</div>
+    </div>
+    <div>
+      <div class="h2" style="font-size:18px;margin-bottom:16px;">Phần cứng</div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="flex:none;width:34px;height:34px;border-radius:6px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></div>
+        <div>
+          <div style="font-size:15px;font-weight:600;">Jetson</div>
+          <div style="font-size:13px;color:var(--text-dim);line-height:1.4;">Chạy AI: phân đoạn làn + phát hiện người lạ, vòng lặp điều khiển chính</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="flex:none;width:34px;height:34px;border-radius:6px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/><path d="M12 4v4M12 16v4M4 12h4M16 12h4"/></svg></div>
+        <div>
+          <div style="font-size:15px;font-weight:600;">STM32 Nucleo&#8209;F411RE + 2&times; BTS7960</div>
+          <div style="font-size:13px;color:var(--text-dim);line-height:1.4;">Nhận lệnh steer/speed, điều khiển PI cho từng bánh qua encoder</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="flex:none;width:34px;height:34px;border-radius:6px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="var(--accent)"/><path d="M12 12L18 7"/></svg></div>
+        <div>
+          <div style="font-size:15px;font-weight:600;">RPLidar</div>
+          <div style="font-size:13px;color:var(--text-dim);line-height:1.4;">Quét 360&deg;, dừng &le;&#8202;1.2m &middot; đi tiếp &ge;&#8202;1.6m</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="flex:none;width:34px;height:34px;border-radius:6px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15a8 8 0 1 1 16 0"/><path d="M12 15l4-5"/><circle cx="12" cy="15" r="1.2" fill="var(--accent)"/></svg></div>
+        <div>
+          <div style="font-size:15px;font-weight:600;">BNO055 IMU</div>
+          <div style="font-size:13px;color:var(--text-dim);line-height:1.4;">Góc nghiêng &amp; yaw &mdash; phát hiện bị nhấc lên, đo lệch cơ khí</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:14px;align-items:flex-start;">
+        <div style="flex:none;width:34px;height:34px;border-radius:6px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="12" rx="2"/><circle cx="12" cy="13" r="3.4"/><path d="M8 7l1.5-2.5h5L16 7"/></svg></div>
+        <div>
+          <div style="font-size:15px;font-weight:600;">Logitech C270</div>
+          <div style="font-size:13px;color:var(--text-dim);line-height:1.4;">640&times;360, đầu vào duy nhất cho khối phân đoạn làn</div>
+        </div>
+      </div>
+</div>
+    </div>
+  </div>
+  <div class="foot">
+    <div>Kiến trúc phần cứng</div>
+    <div class="foot-page">02 / 10</div>
+  </div>
+
+  <div class="islab"><span class="islab-dot"></span>ISLAB</div>
+</div>
+</x-dc>
+
+</body>
+</html>

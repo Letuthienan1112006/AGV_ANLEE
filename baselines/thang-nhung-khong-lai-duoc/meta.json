@@ -1,0 +1,37 @@
+{
+  "config": null,
+  "config_from_run_snapshot": false,
+  "firmware": {
+    "BASE_PWM": "90",
+    "INTEGRAL_LIMIT": "600.0",
+    "KI": "0.015",
+    "KP": "0.45",
+    "MAX_WHEEL_TARGET_TICKS": "70",
+    "PWM_MAX": "140",
+    "PWM_MIN": "70",
+    "RIGHT_WHEEL_PWM_TRIM": "1.03",
+    "SPEED_COMMAND_MAX": "25",
+    "SPEED_REFERENCE": "25",
+    "STEER_COMMAND_MAX": "20",
+    "STEER_GAIN_PERCENT": "70",
+    "TARGET_TICKS_AT_REFERENCE": "40"
+  },
+  "firmware_note": "doc tu main.cpp hien tai luc luu, KHONG phai chup cung lan chay",
+  "git_head_when_saved": "b8b87745",
+  "label": "thang-nhung-khong-lai-duoc",
+  "measured": {
+    "diff_abs_median": 2.0,
+    "duration_s": 113.7,
+    "enc_source": "bridge.log (bi gioi han tan suat)",
+    "err_abs_median": 61,
+    "err_abs_p90": 183,
+    "err_median": 17,
+    "err_right_frac": 0.54,
+    "fps": 4.07,
+    "frames": 403,
+    "line_pct": 97,
+    "moved_samples": 192,
+    "ticks_per_steer": -0.15
+  },
+  "run_dir": "runs_pulled/20260910_030448_road"
+}
