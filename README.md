@@ -152,10 +152,15 @@ LiDAR and is only for a cleared, supervised test area.
 
 ## Reports and presentation
 
+- [Print-ready A3 project poster (PDF)](deliverables/AGV_Project_Poster_A3.pdf)
 - [Final AGV presentation (PPTX)](deliverables/Bao_cao_AGV_NDA_thuc_nghiem.pptx)
 - [Browser-viewable project report](reports/bao_cao_agv_nda.html)
 - [Communication protocol](PROTOCOL.md)
 - [Known issues and engineering lessons](KNOWN_ISSUES.md)
+
+### Project poster
+
+[![Autonomous Patrol Vehicle A3 project poster](deliverables/AGV_Project_Poster_A3_preview.jpg)](deliverables/AGV_Project_Poster_A3.pdf)
 
 ## License
 
