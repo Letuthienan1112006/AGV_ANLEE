@@ -5,6 +5,7 @@ __pycache__/
 *.log
 *.avi
 *.mp4
+!demo/*.mp4
 alert_images/
 old_records/
 patrol_log.db

@@ -1,6 +1,6 @@
-# Autonomous AGV Patrol Robot
+# Autonomous Patrol Vehicle in a Designated Area
 
-[![Tests](https://github.com/Letuthienan1112006/AGV_ANLEE/actions/workflows/tests.yml/badge.svg)](https://github.com/Letuthienan1112006/AGV_ANLEE/actions/workflows/tests.yml)
+[![Tests](https://github.com/Letuthienan1112006/autonomous-patrol-vehicle-in-a-designated-area/actions/workflows/tests.yml/badge.svg)](https://github.com/Letuthienan1112006/autonomous-patrol-vehicle-in-a-designated-area/actions/workflows/tests.yml)
 ![Platform](https://img.shields.io/badge/platform-Jetson%20Nano%20%2B%20STM32-76B900)
 ![Vision](https://img.shields.io/badge/vision-YOLO26%20%2B%20TensorRT-00A3E0)
 
@@ -15,6 +15,13 @@ manual control for commissioning and recovery.
 > and run videos are intentionally excluded because of their size.
 
 ![AGV overview](deliverables/agv_ppt_assets/cover_hero.png)
+
+## Real-world demonstration
+
+[![Watch the autonomous patrol vehicle demonstration](demo/autonomous_patrol_vehicle_demo.jpg)](demo/autonomous_patrol_vehicle_demo.mp4)
+
+**[Watch the 1 minute 45 second road-test video](demo/autonomous_patrol_vehicle_demo.mp4).**
+The clip shows the completed vehicle operating in its designated test area.
 
 ## Highlights
 
